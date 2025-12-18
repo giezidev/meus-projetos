@@ -1,203 +1,241 @@
-@charset "UTF-8";
+@charset_(UTF-8);
 
-*{
-    /*aqui está os resets globais do site*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+:root {
+    --color2: #3100b8c2;
+    --color4: #4b02be;
+    --color3 :#000000fa;
+    --color5: #dbdbdb;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /*faz com que quando eu clique nas opções do menu, a tela fique exatamente em cima os id´s programados, criando uma caixa invisivel do tamanho do menu superior e não deixe ele cobrir os id´s*/
+  }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem; /*Tamanho das letras*/
-    line-height: 1.5em; /*Espaço vertical entre as linhas de texto*/
-    background-image: url(img/fibonati.jpg);
-    background-size: cover; /*A imagem de ajusta a tela inteira*/
-    background-repeat: no-repeat; /*A imagem não ira se repedir*/
-    background-position: center; /*Imagem ira ficar no centro da tela*/
+    background-color: var(--color3);
+    color: var(--color5);
 }
 
-header {
+/* ========================= MENU ========================= */
+
+.navegacao {
+    position: fixed; /*posição fixa*/
+    top: 0; /*zerado no topo*/
+    background: var(--color4);
+    width: 100%; /*largura em todo o top*/
+    z-index: 100; /*sempre acima do conteúdo*/
+    padding: 40px;
+}
+
+
+.menu {
+    flex-flow: row wrap;
+    display: flex;
+    list-style: none; /*tira a bolinha*/
+    gap: 2rem; /*distancia entre os itens*/
+    justify-content: center; /*itens ao centro com espaçamento*/
+}
+
+
+li a {
+    padding: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--color5);
+    border: 2px solid var(--color5);
+}
+
+
+li > a:hover {
+    background-color: var(--color3);
+    color: white;
+}
+
+/* ========================= FOTO/INICIO ========================= */
+
+.foto {
+    width: 100%; /*a imagem se adapta ao espaço disponível*/
+    max-width: 300px; /*não fica gigante demais*/
+    height: auto; /*mantém proporcional*/
+    border-radius: 50%; /*a imagem fica redonda*/
+    display: block; /*torna a foto um bloco, que pode ser manipulado*/
+    margin: 0 0 50px; /*distancia da foto para o texto*/
+    box-shadow: 0 0 70px var(--color4);
+    animation: flutuar 5s ease-in-out infinite; /*(flutuar) pegou o nome configurado no @keyframes com uma animação suave de 5s infinita*/
+}
+
+
+@keyframes flutuar { /*isso é uma configuração de animação*/
+    0%, 100% { /*começa e termina no mesmo local*/
+        transform: translateY(0);
+    }
+    50% { /*na metade ele se desloca -10% para cima (eixo Y)*/
+        transform: translateY(-10%);
+    }
+}
+
+
+.inicio {
+    justify-content: center;
     display: flex;
     align-items: center;
+    flex-flow: column wrap;
+    margin-top: 200px;
 }
 
-.logo { /*Configurações do logo*/
-    width: 150px; /*altura*/
-    height: 150px; /*largura*/
-    border-radius: 50%; /*bordas arredondadas*/
-    margin: 20px;
-    border: 2px solid black;
+
+strong {
+    color: var(--color4);
+    font-size: clamp(3rem, 7vw, 3.5rem);
 }
+
 
 h1 {
-    color: white;
-    font-size: 2.3rem;
-    padding: 5px;
-    text-shadow: 2px 2px 3px black;
+    font-size: 5em;
+    font-size: clamp(3rem, 7vw, 3.5rem);
+}
+
+
+.p-main {
+    font-size: 1.7em;
+    color:var(--color5);
+    margin: 30px auto 50px;
+}
+
+/* ========================= SOBRE MIM ========================= */
+
+.titulo-sobre {
     text-align: start;
+    margin-left: 50px;
+    font-size: 2em;
+    color: var(--color5);
+    margin-top: 50px;
 }
 
-nav {
-    display: flex;
-    margin-left: 28%;
+.sobre {
+    margin: 0 30px;
 }
 
-a { /*Configurações do menu*/
-    margin: 5px;
+.sobre-mim {
+    text-align: center; /*texto ao centro*/
+    flex: 1; /*ocupar todo o espaço disponível, se ajusta e divide o espaço igualmente*/
+    max-width: 65ch; /*tamanho ideal para leitura*/
+    margin: 0 auto; /*cima e baixo 0 laterais automaticas*/
+    border: 2px solid var(--color2);
+    padding: clamp(1rem, 3vw, 2rem); /*Nunca vai ser menor que 1rem, cresce ou diminui conforme 3vw, nunca passa de 2rem*/
+    border-radius: 10px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /*nunca fica menos que 1rem, o texte cresce conforme a tela 2.5vw, limita i crescumento 1.5rem*/
+    line-height: 1.5;
+}
+
+/* ========================= PROJETOS ========================= */
+
+
+.titulo-projetos {
     text-align: center;
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-    background-color: lightgreen;
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.521);
-    font-weight: bold;
-    width: 150px;
+    font-size: 2em;
+    margin: 50px;
 }
 
-header > nav > a:hover { /*Animação do menu*/
-    background-color: rgba(0, 0, 0, 0.623);
-    color: rgb(255, 255, 255);
-    transition: background-color .5s;
-}
 
-.nn {
-    color: white;
-    margin: 0 0 100px 0;
-    font-size: 2rem;
-    text-align: center;
-    text-shadow: 2px 2px 3px black;
-    border: 1px solid black;
-    padding: 20px;
-    background-color: hsla(120, 73%, 75%, 0.37);
-}
-
-main {
+.pp, .p-projetos {
     display: flex;
-    margin-top: 70px;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+
 }
+
 
 .cards {
-    border-radius: 20px;
-    margin: 0 30px;
-    height: 550px;
-    text-align: center;
-    padding: 20px;
-    border: 1px solid black;
-    box-shadow: 2px 3px 3px black;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 5px;
+    align-items: center;
+    border: 2px solid var(--color2);
+    border-radius: 10px;
+    transition: all 0.5s ease; /*a animação é aplicado para todos os cards e tem um deslocamento suave*/
+    overflow: hidden; /*faz com que quando o elemento tem bordas arredondadas, as sobras da imagem suma*/
+    cursor: pointer;
 }
 
-.foto-logo {
-    height: 250px;
-    width: 250px;
-    border-radius: 30px;
-    margin: 30px 0;
-    border: 2px solid black;
+
+.cards:hover {
+    box-shadow: 0 0 70px var(--color2); /*sombra*/
+    transform: translateY(-10px) scale(1.03); /*faz o item se deslocar para cima e aumentar de tamanho*/
 }
 
-.btn {
-    margin-top: 30px;
-    padding: 12px;
-    background-color: lightgreen;
-    border-radius: 15px;
-    font-weight: bold;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.623);
-}
 
-.btn:hover {
-    background-color: rgba(0, 0, 0, 0.623);
-    transition: background-color .3s;
-    color: white;
-}
-
-.nn2 {
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    padding: 20px;
-    margin: 50px 0;
-    text-shadow: 2px 2px 3px black;
-    border: 1px solid black;
-    background-color: hsla(120, 73%, 75%, 0.37);
-}
-
-.op {
+article {
     display: flex;
-    margin: 100px 0;
-    height: 200px;
-    text-align: center;
+    flex-flow: row wrap; /*essa propriedade faz os projetos quebrarem um abaixo do outro*/
     justify-content: space-evenly;
+    gap: 30px;
 }
 
-.coment {
+
+h3 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 1.5em;
+}
+
+
+.p-projetos {
+    text-align: center;
+    margin-top: 5px;
     padding: 20px;
-    margin: 0px 30px;
-    width: 400px;
-    height: 120px;
-    font-weight: bold;
-    box-shadow: 2px 5px 5px lightgreen;
-    border-radius: 5px;
-    border: 1px solid lightgreen;
-    background-color: rgba(127, 255, 212, 0.226);
+    line-height: 1.3em; /*espaço vertical de uma linha a outra*/
 }
 
-span {
-    color: black;
-    padding: 10px;
-}
+/* ========================= CONTATO ========================= */
 
-.stars {
-    color: gold;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
 
-.att {
-    display: flex;
+.contato {
+    padding: 40px 20px;
     text-align: center;
-    flex-direction: column;
-    margin-bottom: 30px;
-    align-items: center;
 }
 
-.att-h2 {
-    color: white;
-    text-shadow: 2px 2px 3px black;
+.contato-info p {
+    font-size: 1.2rem;
+    line-height: 1.5em;
 }
 
-.btn-w {
+.social {
     display: flex;
-    border: 2px solid black;
-    padding: 15px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    background-color: lightgreen;
-    align-items: center;
     justify-content: center;
-    width: 200px;
-    margin-top: 40px;
+    gap: 20px;
+    margin-top: 25px;
 }
 
-.iconw {
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
+.social img {
+    width: 45px;   /* tamanho ideal */
+    height: 45px;
+    transition: transform 0.3s ease; /*pequena animação nos icones*/
 }
 
-.btn-w:hover {
-    background-color: rgba(0, 0, 0, 0.623);
-    transition: background-color .3s;
-    color: white;
+.social img:hover {
+    transform: scale(1.15); /*animação dos icones para eles crescerem um pouco*/
 }
 
-.footer {
+/* ========================= FOOTER ========================= */
+
+footer {
+    background-color: var(--color2);
     text-align: center;
-    padding: 15px;
-    background-color: rgba(127, 255, 212, 0.226);
+    padding: 10px 0 25px;
 }
 
-.conteudo-footer {
-    font-weight: bold;
+
+footer a {
+    color: var(--color3);
 }

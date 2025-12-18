@@ -4,122 +4,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="img/logo-ico.jpg" type="ico" />
-    <title>Gams Design</title>
+    <link rel="shortcut icon" href="img/g.icon.ico" type="image/x-icon" />
+    <title>GiéziDev</title>
   </head>
   <body>
-    <header>
-      <img class="logo" src="img/logo500px.jpg" alt="logo" />
-      <h1>Criatividade em movimento</h1>
-      <nav>
-        <a href="#">Início</a>
-        <a href="#">O que fazemos</a>
-        <a href="#">Nossos clientes</a>
-        <a href="#">Fale Conosco</a>
-      </nav>
-    </header>
+    <nav class="navegacao">
+      <!--Menu de navegação-->
+      <ul class="menu">
+        <li>
+          <a href="#inicio">Início</a>
+        </li>
+        <li>
+          <a href="#sobre">Sobre</a>
+        </li>
+        <li>
+          <a href="#projetos">Projetos</a>
+        </li>
+        <li>
+          <a href="#contato">Contato</a>
+        </li>
+      </ul>
+    </nav>
 
-    <h2 class="nn">Nossos Serviços</h2>
-
-    <main>
-      <article class="cards">
-        <h3 class="tt">Arte para Bordados</h3>
-        <img class="foto-logo" src="img/bordado500px.jpg" alt="" />
-        <p class="descricao">
-          "Transformamos sua arte em bordado com rapidez, facilidade e
-          qualidade. Um trabalho eficiente feito com cuidado e precisão."
-        </p>
-        <button href="#" class="btn">Saiba mais</button>
-      </article>
-
-      <article class="cards">
-        <h3 class="tt">Arte para abadá</h3>
-        <img class="foto-logo" src="img/abada500px.jpg" alt="" />
-        <p class="descricao">
-          "Personalize seu abadá com a gente e curta o que você mais gosta com
-          estilo e alegria! ou se quiser algo mais descontraído e direto fale
-          conosco"
-        </p>
-        <button href="#" class="btn">Saiba mais</button>
-      </article>
-
-      <article class="cards">
-        <h3 class="tt">Criação de logos</h3>
-        <img class="foto-logo" src="img/logo500px.jpg" alt="" />
-        <p class="descricao">
-          "Dê identidade à sua marca com um logo único e memorável, sua ideia,
-          nossa arte: criamos o logo que a sua marca merece."
-        </p>
-        <button href="#" class="btn">Saiba mais</button>
-      </article>
-
-      <article class="cards">
-        <h3 class="tt">Edição de imagens</h3>
-        <img class="foto-logo" src="img/" alt="" />
-        <p class="descricao">
-          "Damos vida nova às suas imagens com edições profissionais e cheias de
-          impacto, transformamos cliques comuns em imagens incríveis!"
-        </p>
-        <button href="#" class="btn">Saiba mais</button>
-      </article>
+    <main id="inicio" class="inicio">
+      <!--Foto e Descrição-->
+      <img class="foto" src="img/eu-300.PNG" alt="minha foto" />
+      <h1>Giézi <strong>Brito</strong></h1>
+      <p class="p-main">Desenvolvedor Front End</p>
     </main>
-
-    <h2 class="nn2">Nossos Clientes</h2>
-
-    <section class="op">
-      <article>
-        <h3 class="stars">
-          <span>#Giézi Brito</span> &#9733; &#9733; &#9733; &#9733; &#9733;
-        </h3>
-        <p class="coment">
-          “Ficou muito bom o serviço. Consegui entregar antes do prazo. Obrigado
-          amigo.”
+    <section id="sobre" class="sobre">
+      <div class="sobre-mim">
+        <p>
+          Sou um desenvolvedor Front-End independente e me tornei profissional
+          nessa área porque acredito que posso fazer a diferença através da
+          tecnologia. Meu objetivo é criar experiências digitais eficientes,
+          simples de entender e realmente úteis.
         </p>
-      </article>
-
-      <article>
-        <h3 class="stars">
-          <span>#Rodrigo Honda</span> &#9733; &#9733; &#9733; &#9733; &#9733;
-        </h3>
-        <p class="coment">
-          “Adorei o resultado! Superou minhas expectativas. Com certeza vou
-          recomendar para outras pessoas!”
-        </p>
-      </article>
-
-      <article>
-        <h3 class="stars">
-          <span>#David Willame</span> &#9733; &#9733; &#9733; &#9733; &#9733;
-        </h3>
-        <p class="coment">
-          “Fiquei feliz com o trabalho, trabalho ficou nota 10. Muito obrigado!”
-        </p>
-      </article>
-
-      <article>
-        <h3 class="stars">
-          <span>#Adriele</span> &#9733; &#9733; &#9733; &#9733; &#9733;
-        </h3>
-        <p class="coment">
-          "Ficou muito bom os abadás! A estampa ficou exatamente como eu quero e
-          o tecido é super confortável. Todo mundo elogiou no evento!"
-        </p>
-      </article>
+      </div>
     </section>
 
-    <section class="att">
-      <h2 class="att-h2">Faça um orçamento sem compromisso</h2>
-      <button class="btn-w">
-        <img class="iconw" src="img/iconw.png" alt="whatsapp"/> Fale Conosco no
-        WhatsApp
-      </button>
-    </section>
+    <section id="projetos">
+      <h2 class="titulo-projetos">Meus Projetos</h2>
+      <article>
+        <div class="cards">
+          <a href="https://giezidev.github.io/gams-design/" target="_blank">
+            <img
+              class="pp"
+              src="img/projeto01.PNG"
+              alt="projetos01"
+            />
+          </a>
+          <h3>Gams Design</h3>
+          <p class="p-projetos">
+            Um site voltado a ajudar clientes que buscam soluções criativas em artes para bordado, edição de imagens e criação de logotipos personalizados, sempre com qualidade e prazos de entrega alinhados às exigências do mercado.
+          </p>
+        </div>
 
-    <footer class="footer">
-      <p class="conteudo-footer">
-        © 2025 Gams Design. Todos os direitos reservados. <br />
-        📍 Rua Signo de Ares, 16 - Nova Terra | (98) 99611-7799
-      </p>
-    </footer>
+        <div class="cards">
+          <img
+            class="pp"
+            src="img/Projetos-em-HTML-e-CSS-para-Iniciantes-1.png"
+            alt="projetos"
+          />
+          <h3>PROJETO1</h3>
+          <p class="p-projetos">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+            corporis, repudiandae illum quam fuga fugit expedita. Architecto
+            odio provident vero voluptates iusto in quisquam rerum illo.
+            Nesciunt facilis incidunt obcaecati!
+          </p>
+        </div>
+
+        <div class="cards">
+          <img
+            class="pp"
+            src="img/Projetos-em-HTML-e-CSS-para-Iniciantes-1.png"
+            alt="projetos"
+          />
+          <h3>PROJETO2</h3>
+          <p class="p-projetos">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+            corporis dolore officia quidem quaerat aspernatur quam ea
+            consectetur, sint animi dolores explicabo quos, quisquam atque. Eum
+            autem voluptatem laboriosam itaque.
+          </p>
+        </div>
+
+        <div class="cards">
+          <img
+            class="pp"
+            src="img/Projetos-em-HTML-e-CSS-para-Iniciantes-1.png"
+            alt="projetos"
+          />
+          <h3>PROJETO3</h3>
+          <p class="p-projetos">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            voluptatem ipsa ea tenetur minus quisquam praesentium eveniet? Est
+            voluptatibus sit architecto, placeat reiciendis quo veniam non sed,
+            voluptate repellendus labore?
+          </p>
+        </div>
+      </article>
+
+      <section id="contato" class="contato">
+        <h3>Entre em Contato</h3>
+
+        <div class="contato-info">
+          <p>Endereço: Rua B, 34 - São Luís MA</p>
+
+          <div class="social">
+            <a
+              href="https://github.com/giezidev"
+              aria-label="Github"
+              target="_blank"
+            >
+              <img src="img/github.ico" alt="github" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/feed/"
+              aria-label="LinkedIn"
+              target="_blank"
+            >
+              <img src="img/linkedin.ico" alt="linkedin" />
+            </a>
+
+            <a
+              href="https://wa.me/5598985797997?text=Olá%20gostaria%20de%20mais%20informações"
+              aria-label="WhatsApp"
+              target="_blank"
+            >
+              <img src="img/wpp.ico.png" alt="WhatsApp" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/giezi.brito/"
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <img src="img/insta.ico.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 - GiéziDev. Todos os direitos reservados.</p>
+      </footer>
+    </section>
   </body>
 </html>
