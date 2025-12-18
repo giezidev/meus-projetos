@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+*{
+    /*aqui está os resets globais do site*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem; /*Tamanho das letras*/
+    line-height: 1.5em; /*Espaço vertical entre as linhas de texto*/
+    background-image: url(img/fibonati.jpg);
+    background-size: cover; /*A imagem de ajusta a tela inteira*/
+    background-repeat: no-repeat; /*A imagem não ira se repedir*/
+    background-position: center; /*Imagem ira ficar no centro da tela*/
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.logo { /*Configurações do logo*/
+    width: 150px; /*altura*/
+    height: 150px; /*largura*/
+    border-radius: 50%; /*bordas arredondadas*/
+    margin: 20px;
+    border: 2px solid black;
+}
+
+h1 {
+    color: white;
+    font-size: 2.3rem;
+    padding: 5px;
+    text-shadow: 2px 2px 3px black;
+    text-align: start;
+}
+
+nav {
+    display: flex;
+    margin-left: 28%;
+}
+
+a { /*Configurações do menu*/
+    margin: 5px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    background-color: lightgreen;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.521);
+    font-weight: bold;
+    width: 150px;
+}
+
+header > nav > a:hover { /*Animação do menu*/
+    background-color: rgba(0, 0, 0, 0.623);
+    color: rgb(255, 255, 255);
+    transition: background-color .5s;
+}
+
+.nn {
+    color: white;
+    margin: 0 0 100px 0;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: hsla(120, 73%, 75%, 0.37);
+}
+
+main {
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-evenly;
+}
+
+.cards {
+    border-radius: 20px;
+    margin: 0 30px;
+    height: 550px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: 2px 3px 3px black;
+}
+
+.foto-logo {
+    height: 250px;
+    width: 250px;
+    border-radius: 30px;
+    margin: 30px 0;
+    border: 2px solid black;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px;
+    background-color: lightgreen;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.623);
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.623);
+    transition: background-color .3s;
+    color: white;
+}
+
+.nn2 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 20px;
+    margin: 50px 0;
+    text-shadow: 2px 2px 3px black;
+    border: 1px solid black;
+    background-color: hsla(120, 73%, 75%, 0.37);
+}
+
+.op {
+    display: flex;
+    margin: 100px 0;
+    height: 200px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.coment {
+    padding: 20px;
+    margin: 0px 30px;
+    width: 400px;
+    height: 120px;
+    font-weight: bold;
+    box-shadow: 2px 5px 5px lightgreen;
+    border-radius: 5px;
+    border: 1px solid lightgreen;
+    background-color: rgba(127, 255, 212, 0.226);
+}
+
+span {
+    color: black;
+    padding: 10px;
+}
+
+.stars {
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.att {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.att-h2 {
+    color: white;
+    text-shadow: 2px 2px 3px black;
+}
+
+.btn-w {
+    display: flex;
+    border: 2px solid black;
+    padding: 15px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: lightgreen;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-top: 40px;
+}
+
+.iconw {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.btn-w:hover {
+    background-color: rgba(0, 0, 0, 0.623);
+    transition: background-color .3s;
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(127, 255, 212, 0.226);
+}
+
+.conteudo-footer {
+    font-weight: bold;
+}
