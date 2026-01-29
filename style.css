@@ -140,16 +140,17 @@ main {
     justify-content: space-evenly;
     gap: 30px;
 }
+
 /*########################################( CARDS )###########################################*/
 .cards {
-    margin: 0 20px;
-    text-align: center;
-    padding: 30px;
-    border-radius: 20px;
+    margin: 0 20px; /*espaços cima e baixo ( 0 ), direita e esquerda ( 20 )*/
+    text-align: center; /*texto alinhado ao centro*/
+    padding: 30px; /*espaço interno/bordas para todos os lados de 30px*/
+    border-radius: 20px; /*arredondamento dos cantos*/
     border: 1px solid black;
     box-shadow: 2px 3px 3px black;
     flex: 1 1 300px;
-    max-width: 300px;
+    max-width: 350px;
 }
 
 .foto-logo {
@@ -160,6 +161,10 @@ main {
     margin: 30px 0;
     border: 2px solid black;
     object-fit: cover;    /* evita distorção */
+}
+
+.descricao {
+    font-weight: bold;
 }
 
 
@@ -189,13 +194,27 @@ main {
     background-color: hsla(120, 73%, 75%, 0.37);
 }
 
-.op {
+.op { /*elemento pai*/
     display: flex;
-    margin: 100px 0;
-    height: 200px;
-    text-align: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap; /*quebra linha automaticamente*/
+    gap: 10px; /*distancia entre os itens*/
+    padding: 10px; /*espaço interno*/
+    justify-content: center; /*itens justificados ao centro*/
 }
+
+.op img { /*configurações responsivas de imagens*/
+    flex: 1 1 150px; /*1 - cresce igualmente com os outros / 1 - pode encolher. / 150px - É o tamanho inicial do item antes de crescer ou encolher.*/
+    max-width: 200px; /*Define a largura máxima que um elemento pode ter.*/
+    height: 450px; /*altura de 450px*/
+    object-fit: cover; /*imagem não distorce*/
+    border-radius: 8px; /*bordas da imagem redondas*/
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .op img:hover {
+    transform: scale(1.5);
+  }
 
 .coment {
     padding: 20px;
@@ -231,6 +250,7 @@ span {
 .att-h2 {
     color: white;
     text-shadow: 2px 2px 3px black;
+    margin-top: 50px;
 }
 
 .btn-w {
